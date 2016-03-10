@@ -23,8 +23,8 @@ public class libraryScript {
 	public static void openBrowser(){
 		log.info("FirefoxDriver Instantiation!");
 		try{
-			//driver = new FirefoxDriver();
-			driver = new HtmlUnitDriver();
+			driver = new FirefoxDriver();
+			//driver = new HtmlUnitDriver();
 		    log.info("FirefoxDriver Instantiated successfully!");
 		}
 		catch(Exception e){
