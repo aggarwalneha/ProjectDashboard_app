@@ -16,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class libraryScript {
 	
@@ -26,8 +27,8 @@ public class libraryScript {
 		try{
 			//driver = new FirefoxDriver();
 			FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/firefox"));
-    //binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
-    driver = new FirefoxDriver(binary,null);
+   			FirefoxProfile firefoxProfile = new FirefoxProfile();       
+			driver = new FirefoxDriver(binary,firefoxProfile);
 			//driver = new HtmlUnitDriver();
 		    log.info("FirefoxDriver Instantiated successfully!");
 		}
