@@ -1,0 +1,10 @@
+# Page Objects
+
+link_projectList = .//img[@class = 'logo-header-image']
+email = .//input[@id = 'Email']
+next_btn = .//input[@id = 'next']
+password = .//input[@id = 'Passwd']
+signIn = .//input[@id = 'signIn']
+addProject = .//button[contains(text(),'Add Project']
+loginForm = .//form[@id = 'loginForm']
+projectType = .//select[@id = 'projectType']
