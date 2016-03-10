@@ -23,7 +23,10 @@ public class libraryScript {
 	public static void openBrowser(){
 		log.info("FirefoxDriver Instantiation!");
 		try{
-			driver = new FirefoxDriver();
+			//driver = new FirefoxDriver();
+			FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/firefox"));
+    binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
+    driver = new FirefoxDriver(binary,null);
 			//driver = new HtmlUnitDriver();
 		    log.info("FirefoxDriver Instantiated successfully!");
 		}
