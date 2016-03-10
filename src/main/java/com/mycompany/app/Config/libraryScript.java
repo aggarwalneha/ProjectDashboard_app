@@ -38,35 +38,25 @@ public class libraryScript {
 	
     public static void navigate(){
     	log.info("Launch URL");
-    	try{	
+    		
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.get(Constants.URL);
 		log.info("URL Hit Sucessfully!");
 		driver.manage().window().maximize();
-       }
-	catch(Exception e)
-       {
-		log.error(e.getMessage());
-	   }
-	}
+    }
     
     public static void VerifyHomePage(String object){
-    	try{
+    	
     	log.info("Verify the Home Page Now!");
     	boolean state = CustomWait(object);
     	if(state)
     	{
 		log.info("Project Dashboard opened successfully!");
     	}
-    	}
-    	catch(Exception e)
-        {
- 		log.error(e.getMessage());
- 	   }
-	}
+    }	
     
     public static void Input(String object){
-    	try{
+    	
     		log.info("Authenticate User - Entering User Email and Password");
     	boolean state = CustomWait(object);
     	if(state)
@@ -78,12 +68,8 @@ public class libraryScript {
       		  driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Constants.password);
       	    }
       		}
-    	}
-    	catch(Exception e)
-        {
- 		log.error(e.getMessage());
- 	   }
-   	}
+    	
+    	 	}
     /*public static void UserAuthenticateEnterPassword(String object){
     	try{
     		log.info("Authenticate User - Enter Password!");
@@ -95,14 +81,11 @@ public class libraryScript {
  	   }
    	}*/
     public static void Click(String object){
-    try{
+    
     	log.info("Authenticate User - ClickNext!");
     	driver.findElement(By.xpath(OR.getProperty(object))).click();
-       }
-    	catch(Exception e)
-        {
- 		log.error(e.getMessage());
- 	   }
+       
+    	
    	}
     public static void QuitDriver(String object){
     	log.info("Quit Browser");
