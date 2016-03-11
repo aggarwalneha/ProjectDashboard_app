@@ -24,18 +24,18 @@ public class libraryScript {
 	public static WebDriver driver;
 	
 	public static void openBrowser(){
-		log.info("FirefoxDriver Instantiation!");
+		log.info("Driver Instantiation!");
 		try{
 			
-			//driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_24);
-			driver = new FirefoxDriver();
+			driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_24);
+			//driver = new FirefoxDriver();
 			//driver = new HtmlUnitDriver();
 			/*
 			FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/firefox"));
    			FirefoxProfile firefoxProfile = new FirefoxProfile();       
 			driver = new FirefoxDriver(binary,firefoxProfile);
 			*/
-		    log.info("FirefoxDriver Instantiated successfully!");
+		    log.info("Driver Instantiated successfully!");
 		    System.out.println("Driver Instantiated successfully!");
 		}
 		catch(Exception e){
